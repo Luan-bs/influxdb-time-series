@@ -6,7 +6,6 @@ Projeto do Grupo 4 sobre bancos NoSQL de Séries Temporais, incluindo slides, de
 # 2) Divisão de tarefas entre as 5 pessoas
 
 ## Pessoa 1 – Motivação Slides iniciais 
-## Luan
 
 Explicar problemas que séries temporais resolvem:
 
@@ -53,6 +52,7 @@ alta cardinalidade extrema nas tags → ruim
 dashboards, métricas e logs → ótimo
 
 ## Pessoa 4 – Demonstração prática
+## Luan
 
 Criar um mini-cenário: “monitoramento de sensores IoT” ou “métricas de servidores”.
 
