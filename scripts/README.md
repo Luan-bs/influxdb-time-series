@@ -1,30 +1,53 @@
-# Demonstração prática — exemplo pronto
+# Arquivos necessários para executar a demonstração prática do projeto do Grupo 4 sobre Bancos NoSQL de Séries Temporais (InfluxDB).
 
-Cenário sugerido: sensores IoT enviando temperatura e umidade.
+## 📁 Conteúdo
 
-## docker-compose.yml (exemplo simples):
-version: '3'
-services:
-  influxdb:
-    image: influxdb:2.7
-    ports:
-      - "8086:8086"
-    environment:
-      - DOCKER_INFLUXDB_INIT_MODE=setup
-      - DOCKER_INFLUXDB_INIT_USERNAME=admin
-      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
-      - DOCKER_INFLUXDB_INIT_ORG=grupo4
-      - DOCKER_INFLUXDB_INIT_BUCKET=sensores
+### docker-compose.yml
+Sobe o InfluxDB já configurado (usuário, senha, organização e bucket).
+
+### insert.sh
+Script com comando curl para inserir dados de sensores (ex.: temperatura).
+
+### query.flux
+Consulta básica usando Flux para recuperar os dados recém-inseridos.
+
+## ▶️ Como executar a demo
+### 1) Subir o InfluxDB
+docker-compose up -d
+
+ Acesse a interface:
+http://localhost:8086
+Copie o token gerado pelo InfluxDB.
+
+### 2) Inserir dados
+
+Edite o script insert.sh e coloque o token:
+
+TOKEN="SEU_TOKEN_AQUI"
+./insert.sh
 
 
-## Inserção de dados (curl):
-curl -X POST http://localhost:8086/api/v2/write?org=grupo4&bucket=sensores&precision=s \
-  -H "Authorization: Token <token>" \
-  --data-raw "temperatura,sensor=livingroom value=23.4 $(date +%s)"
+Isso envia um ponto de dados, por exemplo:
 
-## Consulta (Flux):
+temperatura,sensor=livingroom value=23.4 <timestamp>
+
+### 3) Rodar a consulta
+
+Abra o InfluxDB na interface web:
+
+Data Explorer → Script Editor → cole o conteúdo de query.flux:
+
 from(bucket: "sensores")
   |> range(start: -1h)
   |> filter(fn: (r) => r._measurement == "temperatura")
 
-## Mostre como tags viram índices, explicando porque “sensor=livingroom” permite buscas rápidas.
+
+Execute e visualize os dados.
+
+## ✔️ Pré-requisitos
+
+Docker + Docker Compose
+
+InfluxDB rodando via docker-compose
+
+Token da organização/bucket criado automaticamente
