@@ -3,9 +3,9 @@ Projeto do Grupo 4 sobre bancos NoSQL de Séries Temporais, incluindo slides, de
 
 📌 Sugestão para o grupo: InfluxDB (melhor para demonstração curta + tem CLI + API + UI + bom material visual).
 
-# 2) Divisão de tarefas entre as 5 pessoas
+# Divisão de tarefas entre as 5 pessoas
 
-## Pessoa 1 – Motivação Slides iniciais 
+## Gabrieli – Motivação Slides iniciais 
 
 Explicar problemas que séries temporais resolvem:
 
@@ -22,8 +22,8 @@ dados ordenados por tempo
 Gravar o video
 
 
-## Pessoa 2 – Modelo de Dados (InfluxDB)
-
+## Rafaela – Modelo de Dados (InfluxDB)
+ 
 Explicar o modelo:
 
 Measurement
@@ -37,7 +37,7 @@ Timestamp
 Explicar estrutura em disco (TSM + WAL) de forma simples.
 
 
-## Pessoa 3 – Fit Map (melhores locais + onde evitar)
+## Jhon  – Fit Map (melhores locais + onde evitar)
 
 Preencher a tabela Ótimo / Bom / Aceitável / Ruim.
 
@@ -51,8 +51,8 @@ alta cardinalidade extrema nas tags → ruim
 
 dashboards, métricas e logs → ótimo
 
-## Pessoa 4 – Demonstração prática
-## Luan
+## Luan – Demonstração prática
+
 
 Criar um mini-cenário: “monitoramento de sensores IoT” ou “métricas de servidores”.
 
@@ -67,7 +67,7 @@ consultas Flux/InfluxQL
 índice = tags (justificar)
 
 
-## Pessoa 5 – Otimização, tuning + conclusão e referências
+## Anthony – Otimização, tuning + conclusão e referências
 
 Falar sobre:
 
