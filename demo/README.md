@@ -26,7 +26,7 @@ pip install requests
 | Arquivo                     | Descrição                                          |
 | --------------------------- | -------------------------------------------------- |
 | `docker-compose.yml`        | Sobe o InfluxDB já configurado automaticamente     |
-| `insert_loop.py`            | Envia dados contínuos de 3 sensores                |
+| `insert.py`            | Envia dados contínuos de 3 sensores                |
 | `README.md`                 | Documentação do projeto                            |
 | `consultas.flux` (opcional) | Apenas as 3 primeiras consultas utilizadas na demo |
 
@@ -72,7 +72,7 @@ O script envia **1 leitura/segundo** para **3 sensores (S1, S2, S3)**.
 Execute:
 
 ```bash
-python insert_loop.py
+python insert.py
 ```
 
 Para parar:
