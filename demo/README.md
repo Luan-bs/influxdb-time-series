@@ -93,7 +93,7 @@ Cole as consultas abaixo.
 
 ---
 
-### ✔️ Consulta 1 – Dados dos últimos 15 minutos
+###  Consulta 1 – Dados dos últimos 15 minutos
 
 ```flux
 from(bucket: "iot_raw")
@@ -102,7 +102,7 @@ from(bucket: "iot_raw")
 
 ---
 
-### ✔️ Consulta 2 – Filtrar por um sensor (usa TAG / INDEX)
+###  Consulta 2 – Filtrar por um sensor (usa TAG / INDEX)
 
 ```flux
 from(bucket: "iot_raw")
@@ -112,7 +112,7 @@ from(bucket: "iot_raw")
 
 ---
 
-### ✔️ Consulta 3 – Apenas o campo temperatura
+###  Consulta 3 – Apenas o campo temperatura
 
 ```flux
 from(bucket: "iot_raw")
