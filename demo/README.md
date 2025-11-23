@@ -28,7 +28,7 @@ pip install requests
 | `docker-compose.yml`        | Sobe o InfluxDB já configurado automaticamente     |
 | `insert.py`            | Envia dados contínuos de 3 sensores                |
 | `README.md`                 | Documentação do projeto                            |
-| `scripts(consultas)`        | Apenas as 3 primeiras consultas utilizadas na demo |
+| `querys(consultas)`        | Apenas as 3 primeiras consultas utilizadas na demo |
 
 ---
 
