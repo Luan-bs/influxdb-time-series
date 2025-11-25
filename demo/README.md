@@ -20,9 +20,9 @@ O cenário simulado é um sistema de **monitoramento IoT**, com três sensores e
 | Arquivo                     | Descrição                                          |
 | --------------------------- | -------------------------------------------------- |
 | `docker-compose.yml`        | Sobe o InfluxDB já configurado automaticamente     |
-| `insert_loop.py`            | Envia dados contínuos de 3 sensores                |
+| `insert.py`            | Envia dados contínuos de 3 sensores                |
 | `README.md`                 | Documentação do projeto                            |
-| `consultas.flux` (opcional) | Apenas as 3 primeiras consultas utilizadas na demo |
+| `querys(consultas)`        | Apenas as 3 primeiras consultas utilizadas na demo |
 
 ---
 
@@ -66,7 +66,7 @@ O script envia **1 leitura/segundo** para **3 sensores (S1, S2, S3)**.
 Execute:
 
 ```bash
-python insert_loop.py
+python insert.py
 ```
 
 Para parar:
@@ -87,7 +87,7 @@ Cole as consultas abaixo.
 
 ---
 
-### ✔️ Consulta 1 – Dados dos últimos 15 minutos
+###  Consulta 1 – Dados dos últimos 15 minutos
 
 ```flux
 from(bucket: "iot_raw")
@@ -96,7 +96,7 @@ from(bucket: "iot_raw")
 
 ---
 
-### ✔️ Consulta 2 – Filtrar por um sensor (usa TAG / INDEX)
+###  Consulta 2 – Filtrar por um sensor (usa TAG / INDEX)
 
 ```flux
 from(bucket: "iot_raw")
@@ -106,7 +106,7 @@ from(bucket: "iot_raw")
 
 ---
 
-### ✔️ Consulta 3 – Apenas o campo temperatura
+###  Consulta 3 – Apenas o campo temperatura
 
 ```flux
 from(bucket: "iot_raw")
