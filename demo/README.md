@@ -13,12 +13,6 @@ O cenário simulado é um sistema de **monitoramento IoT**, com três sensores e
 * Python 3.9+
 * Navegador web (para acessar o InfluxDB)
 
-### Bibliotecas Python
-
-```bash
-pip install requests
-```
-
 ---
 
 ## 📌 2. Arquivos do Projeto
